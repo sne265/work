@@ -1,0 +1,21 @@
+Instructions to run the code:
+
+To save the trained model use - -save argument.
+
+python main1.py --cuda --model 'LSTM' --save 'LSTM.pt'
+python main1.py --cuda --model 'RNN_TANH' --save 'TANH.pt'
+python main1.py --cuda --model 'RNN_RELU' --save 'RELU.pt'
+python main1.py --cuda --model 'GRU' --save 'GRU.pt'
+
+
+To get probabilities.
+
+for probability:
+python probability.py --cuda --checkpoint './LSTM.pt'
+python probability.py --cuda --checkpoint './TANH.pt'
+python probability.py --cuda --checkpoint './RELU.pt'
+python probability.py --cuda --checkpoint './GRU.pt'
+
+To pass other input files to get probabilities:
+
+python probability.py --cuda --checkpoint saved_checkpoint --input input_folder_path
